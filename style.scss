@@ -19,13 +19,12 @@ $fontz: "Quicksand", sans-serif;
 
 body {
   background-color: $bgfont;
-  color: $bgfont;
+  color: black;
   font-family: $fontz;
 }
 
 footer {
   display: inline-flex;
-  color: red;
 }
 
 // MOBILE

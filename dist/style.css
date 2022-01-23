@@ -5,11 +5,10 @@
 
 body {
   background-color: #fbfbfb;
-  color: #fbfbfb;
+  color: black;
   font-family: "Quicksand", sans-serif;
 }
 
 footer {
   display: inline-flex;
-  color: red;
 }
