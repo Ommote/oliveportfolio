@@ -1,16 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap");
-// VARIABLES
-// COLOURS
-$bgfont: rgb(251, 251, 251);
-$about: #ff931e;
-$projects: #29abe2;
-$stack: #f15a24;
+@import "./foundation/colours", "./foundation/fonts";
 
-// TYPOGRAPHY
-$fontz: sans-serif;
-$quick: "Quicksand";
-
-// BASE VALUES
 * {
   margin: 0;
   padding: 0;
