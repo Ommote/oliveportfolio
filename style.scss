@@ -219,6 +219,7 @@ i {
       grid-template-columns: 350px;
       grid-template-rows: auto;
       padding: 10px;
+      padding-top: 0;
       & i {
         font-size: 80px;
       }
@@ -246,8 +247,10 @@ i {
       row-gap: 30px;
       align-items: center;
       padding: 40px;
+      padding-top: 0;
 
       &__title {
+        padding-top: 0;
         grid-area: title;
         font-size: 70px;
       }
