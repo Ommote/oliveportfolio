@@ -38,6 +38,7 @@ footer {
   display: flex;
   justify-content: space-between;
   font-weight: bolder;
+  padding: 0 20px;
 }
 
 i {
