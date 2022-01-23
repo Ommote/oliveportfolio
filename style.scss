@@ -23,6 +23,11 @@ body {
   font-family: $fontz;
 }
 
+footer {
+  display: inline-flex;
+  color: red;
+}
+
 // MOBILE
 @media screen and (max-width: 768px) {
 }
