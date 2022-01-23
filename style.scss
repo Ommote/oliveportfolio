@@ -1,0 +1,28 @@
+// variables
+
+// colours
+$bgfont: rgb(251, 251, 251);
+$about: #ff931e;
+$projects: #29abe2;
+$stack: #f15a24;
+
+// typography
+$fontz: "Quicksand", sans-serif;
+
+// display
+
+// BASE VALUES
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bgfont;
+  color: $bgfont;
+  font-family: $fontz;
+}
+
+// MOBILE
+@media screen and (max-width: 768px) {
+}
