@@ -23,6 +23,18 @@ body {
   font-family: $fontz;
 }
 
+.layout {
+  &__about {
+    background-color: $about;
+  }
+  &__projects {
+    background-color: $projects;
+  }
+  &__stack {
+    background-color: $stack;
+  }
+}
+
 header {
   text-transform: uppercase;
 }
@@ -37,20 +49,12 @@ i {
   color: $bgfont;
 }
 // MOBILE
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   header {
     font-size: 14px;
   }
-  header h3 {
-    font-size: 16px;
-  }
 
-  //   img {
-  //     height: 100px;
-  //     width: 100px;
-  //   }
   .layout {
-    background-color: $bgfont;
     margin: 20px;
     display: grid;
     grid-template-columns: 1fr;
@@ -58,7 +62,6 @@ i {
     row-gap: 20px;
 
     &__about {
-      background-color: $about;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 100px 150px 100px 200px;
@@ -81,6 +84,41 @@ i {
     }
     &__stack {
       background-color: $stack;
+    }
+  }
+}
+
+// TABLET
+@media screen and (min-width: 480px) and (max-width: 768px) {
+}
+// DESKTOP
+@media screen and (min-width: 768px) {
+  header {
+  }
+
+  .layout {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 350px 300px 300px;
+    grid-template-rows: 300px 400px 200px;
+    grid-template-areas:
+      "about projects projects projects"
+      "about projects projects projects"
+      "about stack stack stack";
+    &__about {
+      grid-area: about;
+      & img {
+        height: 250px;
+        width: 250px;
+      }
+    }
+
+    &__projects {
+      grid-area: projects;
+    }
+
+    &__stack {
+      grid-area: stack;
     }
   }
 }

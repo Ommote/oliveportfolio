@@ -9,6 +9,16 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+.layout__about {
+  background-color: #ff931e;
+}
+.layout__projects {
+  background-color: #29abe2;
+}
+.layout__stack {
+  background-color: #f15a24;
+}
+
 header {
   text-transform: uppercase;
 }
@@ -26,17 +36,12 @@ i {
   color: #fbfbfb;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   header {
     font-size: 14px;
   }
 
-  header h3 {
-    font-size: 16px;
-  }
-
   .layout {
-    background-color: #fbfbfb;
     margin: 20px;
     display: grid;
     grid-template-columns: 1fr;
@@ -44,7 +49,6 @@ i {
     row-gap: 20px;
   }
   .layout__about {
-    background-color: #ff931e;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 150px 100px 200px;
@@ -66,5 +70,27 @@ i {
   }
   .layout__stack {
     background-color: #f15a24;
+  }
+}
+@media screen and (min-width: 768px) {
+  .layout {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 350px 300px 300px;
+    grid-template-rows: 300px 400px 200px;
+    grid-template-areas: "about projects projects projects" "about projects projects projects" "about stack stack stack";
+  }
+  .layout__about {
+    grid-area: about;
+  }
+  .layout__about img {
+    height: 250px;
+    width: 250px;
+  }
+  .layout__projects {
+    grid-area: projects;
+  }
+  .layout__stack {
+    grid-area: stack;
   }
 }
