@@ -25,9 +25,17 @@ body {
 .layout {
   &__about {
     background-color: $about;
+
+    &__title {
+      font-family: $quick;
+    }
   }
   &__projects {
     background-color: $projects;
+
+    &__title {
+      font-family: $quick;
+    }
   }
   &__stack {
     background-color: $stack;
@@ -127,7 +135,7 @@ i {
   }
   .layout {
     display: grid;
-    grid-template-rows: 420px 1000px 150px;
+    grid-template-rows: 420px 600px 150px;
     row-gap: 25px;
     margin: 25px;
     text-align: center;
@@ -158,9 +166,18 @@ i {
       }
     }
     &__projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 100px 250px 250px;
+      grid-template-areas: "title title title title";
+      padding: 25px;
       & img {
         height: 150px;
         width: 150px;
+      }
+      &__title {
+        grid-area: title;
+        font-size: 50px;
       }
     }
     &__stack {

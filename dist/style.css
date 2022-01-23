@@ -13,8 +13,14 @@ body {
 .layout__about {
   background-color: #ff931e;
 }
+.layout__about__title {
+  font-family: "Quicksand";
+}
 .layout__projects {
   background-color: #29abe2;
+}
+.layout__projects__title {
+  font-family: "Quicksand";
 }
 .layout__stack {
   background-color: #f15a24;
@@ -114,7 +120,7 @@ i {
 
   .layout {
     display: grid;
-    grid-template-rows: 420px 1000px 150px;
+    grid-template-rows: 420px 600px 150px;
     row-gap: 25px;
     margin: 25px;
     text-align: center;
@@ -142,9 +148,20 @@ i {
     display: flex;
     justify-content: space-between;
   }
+  .layout__projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 250px 250px;
+    grid-template-areas: "title title title title";
+    padding: 25px;
+  }
   .layout__projects img {
     height: 150px;
     width: 150px;
+  }
+  .layout__projects__title {
+    grid-area: title;
+    font-size: 50px;
   }
   .layout__stack {
     display: flex;
