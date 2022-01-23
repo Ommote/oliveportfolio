@@ -166,15 +166,20 @@ i {
     &__projects {
       grid-area: projects;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 100px 200px 200px 200px 200px;
-      grid-template-areas: "title title";
+      grid-template-areas: "title title title title";
       row-gap: 30px;
       align-items: center;
+      padding: 40px;
 
       &__title {
         grid-area: title;
         font-size: 70px;
+      }
+      & img {
+        height: 200px;
+        width: 200px;
       }
     }
 
