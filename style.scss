@@ -33,7 +33,9 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-
+i {
+  color: $bgfont;
+}
 // MOBILE
 @media screen and (max-width: 768px) {
   header {
@@ -43,10 +45,10 @@ footer {
     font-size: 16px;
   }
 
-  img {
-    height: 100px;
-    width: 100px;
-  }
+  //   img {
+  //     height: 100px;
+  //     width: 100px;
+  //   }
   .layout {
     background-color: $bgfont;
     margin: 20px;
@@ -57,6 +59,22 @@ footer {
 
     &__about {
       background-color: $about;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 150px 100px 200px;
+      text-align: center;
+
+      align-items: center;
+      & img {
+        height: 150px;
+        width: 150px;
+      }
+      & i {
+        font-size: 60px;
+      }
+      &__title {
+        font-size: 30px;
+      }
     }
     &__projects {
       background-color: $projects;
