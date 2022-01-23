@@ -1,15 +1,14 @@
-// variables
-
-// colours
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap");
+// VARIABLES
+// COLOURS
 $bgfont: rgb(251, 251, 251);
 $about: #ff931e;
 $projects: #29abe2;
 $stack: #f15a24;
 
-// typography
-$fontz: "Quicksand", sans-serif;
-
-// display
+// TYPOGRAPHY
+$fontz: sans-serif;
+$quick: "Quicksand";
 
 // BASE VALUES
 * {
@@ -78,6 +77,7 @@ i {
       }
       &__title {
         font-size: 30px;
+        font-family: $quick;
       }
       &__contact {
         font-size: 30px;
@@ -119,7 +119,63 @@ i {
 
 // TABLET
 @media screen and (min-width: 480px) and (max-width: 768px) {
+  header {
+    font-size: 30px;
+  }
+  footer {
+    font-size: 20px;
+  }
+  .layout {
+    display: grid;
+    grid-template-rows: 420px 1000px 150px;
+    row-gap: 25px;
+    margin: 25px;
+    text-align: center;
+    &__about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 70px 250px 70px;
+      grid-template-areas:
+        "title title"
+        "image intro"
+        "contact contact";
+      padding: 20px;
+      align-items: center;
+      & img {
+        height: 200px;
+        width: 200px;
+      }
+      & i {
+        font-size: 60px;
+      }
+      &__title {
+        grid-area: title;
+        font-size: 50px;
+      }
+      &__contact {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__projects {
+      & img {
+        height: 150px;
+        width: 150px;
+      }
+    }
+    &__stack {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+
+      & i {
+        font-size: 60px;
+      }
+    }
+  }
 }
+
 // DESKTOP
 @media screen and (min-width: 768px) {
   header {

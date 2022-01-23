@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 body {
   background-color: #fbfbfb;
   color: black;
-  font-family: "Quicksand", sans-serif;
+  font-family: sans-serif;
 }
 
 .layout__about {
@@ -66,6 +67,7 @@ i {
   }
   .layout__about__title {
     font-size: 30px;
+    font-family: "Quicksand";
   }
   .layout__about__contact {
     font-size: 30px;
@@ -99,6 +101,59 @@ i {
   }
   .layout__stack i {
     font-size: 50px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  header {
+    font-size: 30px;
+  }
+
+  footer {
+    font-size: 20px;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-rows: 420px 1000px 150px;
+    row-gap: 25px;
+    margin: 25px;
+    text-align: center;
+  }
+  .layout__about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 250px 70px;
+    grid-template-areas: "title title" "image intro" "contact contact";
+    padding: 20px;
+    align-items: center;
+  }
+  .layout__about img {
+    height: 200px;
+    width: 200px;
+  }
+  .layout__about i {
+    font-size: 60px;
+  }
+  .layout__about__title {
+    grid-area: title;
+    font-size: 50px;
+  }
+  .layout__about__contact {
+    display: flex;
+    justify-content: space-between;
+  }
+  .layout__projects img {
+    height: 150px;
+    width: 150px;
+  }
+  .layout__stack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .layout__stack i {
+    font-size: 60px;
   }
 }
 @media screen and (min-width: 768px) {
