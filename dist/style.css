@@ -86,6 +86,10 @@ i {
     grid-area: title;
     font-size: 30px;
   }
+  .layout__projects img {
+    height: 100px;
+    width: 100px;
+  }
   .layout__stack {
     background-color: #f15a24;
     display: flex;

@@ -98,6 +98,10 @@ i {
         grid-area: title;
         font-size: 30px;
       }
+      & img {
+        height: 100px;
+        width: 100px;
+      }
     }
     &__stack {
       background-color: $stack;
