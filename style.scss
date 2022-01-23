@@ -44,6 +44,7 @@ header span {
 footer {
   display: flex;
   justify-content: space-between;
+  font-weight: bolder;
 }
 i {
   color: $bgfont;
@@ -60,14 +61,14 @@ i {
     grid-template-columns: 1fr;
     grid-template-rows: 500px 1100px 100px;
     row-gap: 20px;
+    text-align: center;
 
     &__about {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 100px 150px 100px 200px;
-      text-align: center;
-
       align-items: center;
+      padding: 10px;
       & img {
         height: 150px;
         width: 150px;
@@ -78,12 +79,36 @@ i {
       &__title {
         font-size: 30px;
       }
+      &__contact {
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
     }
     &__projects {
       background-color: $projects;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 200px 200px 200px 200px;
+      grid-template-areas: "title title";
+      row-gap: 30px;
+      align-items: center;
+      &__title {
+        grid-area: title;
+        font-size: 30px;
+      }
     }
     &__stack {
       background-color: $stack;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+
+      & i {
+        font-size: 50px;
+      }
     }
   }
 }
@@ -94,31 +119,71 @@ i {
 // DESKTOP
 @media screen and (min-width: 768px) {
   header {
+    font-size: 50px;
   }
-
+  footer {
+    font-size: 25px;
+  }
   .layout {
     margin: 30px;
     display: grid;
-    grid-template-columns: 350px 300px 300px;
+    grid-template-columns: 380px 300px 300px;
     grid-template-rows: 300px 400px 200px;
     grid-template-areas:
       "about projects projects projects"
       "about projects projects projects"
       "about stack stack stack";
+    grid-gap: 25px;
+    text-align: center;
     &__about {
       grid-area: about;
+      display: grid;
+      grid-template-columns: 350px;
+      grid-template-rows: auto;
+      padding: 10px;
+      & i {
+        font-size: 80px;
+      }
       & img {
         height: 250px;
         width: 250px;
+      }
+      &__title {
+        font-size: 70px;
+      }
+      &__intro p {
+        font-size: 30px;
+      }
+      &__contact {
+        font-size: 60px;
       }
     }
 
     &__projects {
       grid-area: projects;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 200px 200px 200px 200px;
+      grid-template-areas: "title title";
+      row-gap: 30px;
+      align-items: center;
+
+      &__title {
+        grid-area: title;
+        font-size: 70px;
+      }
     }
 
     &__stack {
       grid-area: stack;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+
+      & i {
+        font-size: 80px;
+      }
     }
   }
 }
